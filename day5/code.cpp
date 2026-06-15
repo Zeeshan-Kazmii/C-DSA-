@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -69,16 +70,85 @@ int main() {
     // cout << "Sum of digits is: " << sum << endl;
 
     //8. print num ber in reverse order
-    int n =10829;
-    int lastdigit, res =0;
+    // int n =10829;
+    // int lastdigit, res =0;
 
-    while ( n > 0){
-        lastdigit =n%10;
-        res = res * 10 + lastdigit; 
-        cout << lastdigit << " "<< endl;
-        cout << res << " "<< endl ;
-        n = n/10;
+    // while ( n > 0){
+    //     lastdigit =n%10;
+    //     res = res * 10 + lastdigit; 
+    //     cout << lastdigit << " "<< endl;
+    //     cout << res << " "<< endl ;
+    //     n = n/10;
+    // }
+
+    //do while loop
+    // int count = 0;
+    // do{
+    //     cout << count << " ";
+    //     count++;
+    // } while(count < 5);
+
+    // int num ;
+    // do{
+    //     cout << "enter the number : " << endl;
+    //     cin >> num;
+    //     if (num % 10 == 0){
+    //         break;
+    //     }
+    // } while(true);
+
+    // for ( int i=1; i<=10; i++){
+    //     if(i==3){
+    //         continue;
+    //     }
+    //     cout << i << endl;
+    // }
+
+    // int num;
+    // do{
+    //     cout << "Enter number except multiple of 10 : " <<endl;
+    //     cin >> num;
+    //     if (num % 10 ==0){
+    //         continue;
+    //     }
+    //     cout << "num = " << num << endl;
+    // } while ( true);
+
+    // int num;
+    // cout << "Enter the number : " << endl;
+    // cin >> num;
+    // bool isPrime =true;
+    // for (int i=2; i <= num-1; i++) {
+    //     if (num % i == 0){ // i is a factor of n; i completely divides n;
+    //         isPrime =false;
+    //         break;
+    //     }
+    // }
+    // if (isPrime){
+    //     cout << "number is a prime" << endl;
+    // } else {
+    //     cout << "number is not a prime" << endl;
+    // }
+
+
+    // is prime number or not 
+    int n;
+    cout << "Enter n" << endl;
+    cin >>n;
+    bool isPrime = true;
+    for (int i=2; i<=sqrt(n);i++){
+        if ( n % i == 0 ){
+            isPrime = false; // i is a factor of n; i completely divides n; n is non-prime
+            break;
+        }
+
     }
+    if (isPrime){
+        cout << "number is a prime" << endl;
+    } else {
+        cout << "number is not a prime" << endl;
+    }
+
 
     return 0;
 }
